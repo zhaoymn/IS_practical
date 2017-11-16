@@ -43,12 +43,12 @@ public class BFTS_Demo {
 //		System.out.println(dgs.f.get_maximum_stored());
 //		System.out.println(dgs.nodes_generated());
 //
-//		System.out.println("bts");
-//
-//		Node btssolution = bts.findSolution(new TourState(startCity), goalTest);
-////		new TourPrinting().printSolution(btssolution);
-//		System.out.println(bts.f.get_maximum_stored());
-//		System.out.println(bts.nodes_generated());
+////		System.out.println("bts");
+////
+////		Node btssolution = bts.findSolution(new TourState(startCity), goalTest);
+//////		new TourPrinting().printSolution(btssolution);
+////		System.out.println(bts.f.get_maximum_stored());
+////		System.out.println(bts.nodes_generated());
 //
 //		System.out.println("bgs");
 //

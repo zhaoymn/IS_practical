@@ -30,7 +30,12 @@ public class TourState implements State {
 		hmap.put("Pitesti", 41);
 		hmap.put("Sibiu", 43);
 		hmap.put("Zerind", 47);
-		hmap.put("Giurgui", 51);
+		hmap.put("Giurgiu", 51);
+		hmap.put("Vaslui", 53);
+		hmap.put("Mehadia", 59);
+		hmap.put("Neamt", 61);
+		hmap.put("Timisoara", 67);
+		hmap.put("Giurgui", 71);
 	}
 	public TourState(City startCity) {
 		this.visitedCities = Collections.emptySet();
@@ -61,16 +66,16 @@ public class TourState implements State {
 	}
 	@Override
 	public int hashCode() {
-		return this.currentCity.hashCode()+this.visitedCities.hashCode();
+//		return this.currentCity.hashCode()+this.visitedCities.hashCode();
 //		return 0;
-		// TODO Auto-generated method stub
-//		int base = 1;
-//		for(City c:this.visitedCities) {
-//			base*=hmap.get(c.getName());
-//		}
-//		base = base + hmap.get(this.currentCity.getName());
-//		
-//		return base;
+//		 TODO Auto-generated method stub
+		int base = 1;
+		for(City c:this.visitedCities) {
+			base*=hmap.get(c.name);
+		}
+		base = base + hmap.get(this.currentCity.getName());
+		
+		return base;
 //		return 0;
 	}
 }

@@ -33,12 +33,12 @@ public class BFTS_Demo {
 		TreeSearch bts = new TreeSearch(btf);
 		GraphSearch bgs = new GraphSearch(bgf);
 		
-//		Node dgssolution = dgs.findSolution(initialConfiguration, goalTest);
-//		//new NPuzzlePrinting().printSolution(dgssolution);
-//
-//		System.out.println("dgs");
-//		System.out.println(dgs.f.get_maximum_stored());
-//		System.out.println(dgs.nodes_generated());
+		Node dgssolution = dgs.findSolution(initialConfiguration, goalTest);
+		//new NPuzzlePrinting().printSolution(dgssolution);
+
+		System.out.println("dgs");
+		System.out.println(dgs.f.get_maximum_stored());
+		System.out.println(dgs.nodes_generated());
 //		
 ////		
 ////		Node dtssolution = dts.findSolution(initialConfiguration, goalTest);
@@ -46,24 +46,24 @@ public class BFTS_Demo {
 ////		System.out.println(dts.f.get_maximum_stored());
 ////		System.out.println(dts.nodes_generated());
 
-//		System.out.println("bgs");
-//
-//		Node bgssolution = bgs.findSolution(initialConfiguration, goalTest);
-//		new NPuzzlePrinting().printSolution(bgssolution);
-//		System.out.println(bgs.f.get_maximum_stored());
-//		System.out.println(bgs.nodes_generated());
-//		Node btssolution = bts.findSolution(initialConfiguration, goalTest);
-//		new NPuzzlePrinting().printSolution(btssolution);
-//		System.out.println("bts");
-//		System.out.println(bts.f.get_maximum_stored());
-//		System.out.println(bts.nodes_generated());
-//		
-//		System.out.println("Iterative Deepening");
-//		IterativeDeepeningTreeSearch idts = new IterativeDeepeningTreeSearch();
-//		Node idtssolution = idts.findSolution(initialConfiguration, goalTest);
-//		new NPuzzlePrinting().printSolution(idtssolution);
-//		System.out.println(idts.f.get_maximum_stored());
-//		System.out.println(idts.nodes_generated());
+		System.out.println("bgs");
+
+		Node bgssolution = bgs.findSolution(initialConfiguration, goalTest);
+		new NPuzzlePrinting().printSolution(bgssolution);
+		System.out.println(bgs.f.get_maximum_stored());
+		System.out.println(bgs.nodes_generated());
+		Node btssolution = bts.findSolution(initialConfiguration, goalTest);
+		new NPuzzlePrinting().printSolution(btssolution);
+		System.out.println("bts");
+		System.out.println(bts.f.get_maximum_stored());
+		System.out.println(bts.nodes_generated());
+		
+		System.out.println("Iterative Deepening");
+		IterativeDeepeningTreeSearch idts = new IterativeDeepeningTreeSearch();
+		Node idtssolution = idts.findSolution(initialConfiguration, goalTest);
+		new NPuzzlePrinting().printSolution(idtssolution);
+		System.out.println(idts.f.get_maximum_stored());
+		System.out.println(idts.nodes_generated());
 		
 		System.out.println("A* Tree Search");
 		TreeSearch at = new TreeSearch(new BestFirstFrontier(new AStarFunction(new MisplacedTilesHeuristicFunction())));

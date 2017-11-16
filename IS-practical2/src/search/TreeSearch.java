@@ -14,7 +14,7 @@ public class TreeSearch implements Search{
 		// TODO Auto-generated method stub
 //        f.clear();
 		f.add(new Node(null, null, initialConfiguration));
-		nodes_num = 1;
+		nodes_num = 0;
 		while (!f.isEmpty()) {
 			Node node = f.remove();
 			if (gt.isGoal(node.state))

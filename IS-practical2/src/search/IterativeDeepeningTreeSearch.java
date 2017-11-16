@@ -18,7 +18,7 @@ public class IterativeDeepeningTreeSearch implements Search{
 		while(true) {
 			System.out.println("depth"+String.valueOf(depth));
 			Node node = new Node(null, null, initialConfiguration);
-			nodes_num = 1;
+			nodes_num = 0;
 			boolean have_son = false;
 			while (!gt.isGoal(node.state)) {
 				for (Action action : node.state.getApplicableActions()) {

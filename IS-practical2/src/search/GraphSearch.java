@@ -19,7 +19,7 @@ public class GraphSearch implements Search{
 		// TODO Auto-generated method stub
 //		f.clear();
 		visited_states=new HashSet<State>();
-		nodes_num = 1;
+		nodes_num = 0;
 		Node node = new Node(null, null, initialConfiguration);
 		while (!gt.isGoal(node.state)) {
 			visited_states.add(node.state);
@@ -50,6 +50,7 @@ public class GraphSearch implements Search{
 					}
 				}
 				if(flag2==0)break;
+				if(f.isEmpty()) return null;
 			}
 		}
 		return node;
